@@ -76,40 +76,43 @@ public class Main {
     private static void task6() {
         System.out.println("Задание 6");
         //Инициализация
-        float bananW = 0.08F;
-        float milkW = 0.105F;
-        float plombirW = 0.100F;
-        float egeW = 0.007F;
+        int bananWeightGr = 80;
+        int milkWeightMl = 200;
+        int milkGrIn100Ml = 105;
+        int plombirWeightGr = 100;
+        int egeWeightGr = 70;
         //Решение
-        float totalW = 5*bananW + 2*milkW + 2*plombirW + 4*egeW;
+        int milkWeightGr = milkWeightMl / 100 * milkGrIn100Ml;
+        int totalWeightGr = 5*bananWeightGr + 2*milkWeightGr + 2*plombirWeightGr + 4*egeWeightGr;
         //Вывод
         System.out.println("И так...");
-        System.out.println("Вес спортзавтрака: " + String.format("%.3f", totalW) + "кг, или " + String.format("%.0f", totalW*1000) + " грамм.");
+        System.out.println("Вес спортзавтрака: " + String.format("%.3f",((float) totalWeightGr/1000)) +
+                "кг, или " + totalWeightGr + " грамм.");
     }
 
     private static void task5() {
         System.out.println("Задание 5");
         //Инициализация
-        int totalCol = 120;
-        int p2pColW = 2;
-        int p2pColB = 4;
+        int totalPaint = 120;
+        int paint2ClassWhite = 2;
+        int paint2ClassBrown = 4;
         //Решение
-        int totalClass = totalCol/(p2pColB+p2pColW);
-        int totalB = totalClass*p2pColB;
-        int totalW = totalClass*p2pColW;
+        int totalClass = totalPaint/(paint2ClassBrown+paint2ClassWhite);
+        int totalBrown = totalClass*paint2ClassBrown;
+        int totalWhite = totalClass*paint2ClassWhite;
         // Вывод
         System.out.println("И так...");
-        System.out.println("В школе, где "+totalClass+" классов, нужно "+totalW+
-                " банок белой краски и "+totalB+" банок коричневой краски");
+        System.out.println("В школе, где "+totalClass+" классов, нужно "+totalWhite+
+                " банок белой краски и "+totalBrown+" банок коричневой краски");
     }
 
     private static void task4() {
         System.out.println("Задание 4");
-        //Инициализация
-        int speed = 16;
+        //Инициализация исходных данных
+        int speed = 16/2;
         //Решение
-        int rezult20m = speed/2*20;
-        int rezult1D = speed/2*60*24;
+        int rezult20m = speed*20;
+        int rezult1D = speed*60*24;
         int rezult3D = rezult1D*3;
         int rezult1M = rezult1D*30;
         // Вывод
@@ -123,18 +126,18 @@ public class Main {
 
     private static void task3() {
         System.out.println("Задание 3");
-        //Инициализация
+        //Инициализация исходных данных
         byte tLP = 23;
         byte tAS = 27;
         byte tEA = 30;
         int paper = 490;
-        int p2p =0;
+        int paper2student = 0;
         //Решение
-        int tAll = (tAS + tEA + tLP);
-        p2p = paper / tAll;
+        int studentAll = (tAS + tEA + tLP);
+        paper2student = paper / studentAll;
         //Вывод
-        System.out.println("На каждого ученика рассчитано "+ p2p +" листов бумаги");
-        System.out.println("И останутся запосных листов " + (paper - (tAll * p2p)));
+        System.out.println("На каждого ученика рассчитано "+ paper2student +" листов бумаги");
+        System.out.println("И останутся запосных листов " + (paper - (studentAll * paper2student)));
     }
 
     public static void task2() {
@@ -150,15 +153,16 @@ public class Main {
         //Решение
 
         //Вывод
-        System.out.println("Дано следующие значения: \n" +
-                "    27.12\n" +
-                "    987 678 965 549\n" +
-                "    2.786\n" +
-                "    569\n" +
-                "    -159\n" +
-                "    27897\n" +
-                "    67\n" +
-                "Надо выставить типы");
+        System.out.println("""
+                Дано следующие значения:\s
+                    27.12
+                    987 678 965 549
+                    2.786
+                    569
+                    -159
+                    27897
+                    67
+                Надо выставить типы""");
         System.out.println("Значение 27.12 - Flost ="+var1);
         System.out.println("Значение 987 678 965 549 - Long ="+var2);
         System.out.println("Значение 2.786 - Float ="+var3);
