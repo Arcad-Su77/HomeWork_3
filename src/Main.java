@@ -41,9 +41,9 @@ public class Main {
         float kristina = 76230F;
         int percent = 10;
         //Решение
-        float mashaNew = (float) (masha * percent/100);
-        float denisNew = (float) (denis * percent/100);
-        float kristinaNew = (float) (kristina * percent/100);
+        float mashaNew = masha * percent/100;
+        float denisNew = denis * percent/100;
+        float kristinaNew = kristina * percent/100;
         float mashaBonus = (mashaNew-masha)*12;
         float denisBonus = (denisNew-denis)*12;
         float kristinaBonus = (kristinaNew-kristina)*12;
