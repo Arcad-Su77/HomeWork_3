@@ -39,10 +39,11 @@ public class Main {
         float masha = 67760F;
         float denis = 83690F;
         float kristina = 76230F;
+        int percent = 10;
         //Решение
-        float mashaNew = (float) (masha * 1.1);
-        float denisNew = (float) (denis * 1.1);
-        float kristinaNew = (float) (kristina * 1.1);
+        float mashaNew = (float) (masha * percent/100);
+        float denisNew = (float) (denis * percent/100);
+        float kristinaNew = (float) (kristina * percent/100);
         float mashaBonus = (mashaNew-masha)*12;
         float denisBonus = (denisNew-denis)*12;
         float kristinaBonus = (kristinaNew-kristina)*12;
@@ -77,13 +78,20 @@ public class Main {
         System.out.println("Задание 6");
         //Инициализация
         int bananWeightGr = 80;
+        int bananaCount = 5;
         int milkWeightMl = 200;
         int milkGrIn100Ml = 105;
+        int milkCount =2;
         int plombirWeightGr = 100;
+        int plombirCount = 2;
         int egeWeightGr = 70;
+        int egeCount = 4;
         //Решение
         int milkWeightGr = milkWeightMl / 100 * milkGrIn100Ml;
-        int totalWeightGr = 5*bananWeightGr + 2*milkWeightGr + 2*plombirWeightGr + 4*egeWeightGr;
+        int totalWeightGr = bananaCount*bananWeightGr +
+                milkCount*milkWeightGr +
+                plombirCount*plombirWeightGr +
+                egeCount*egeWeightGr;
         //Вывод
         System.out.println("И так...");
         System.out.println("Вес спортзавтрака: " + String.format("%.3f",((float) totalWeightGr/1000)) +
